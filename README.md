@@ -19,6 +19,7 @@ Example 1.
 We have folder "D:\\pictures" with pictures of types png and jpg.
 We want to create file pdf_with_pictures.pdf out of them and save it in the same folder.
 
+```python
 outputPdfName = "pdf_with_pictures"
 pathToSavePdfTo = "D:\\pictures"
 pathToPictures = "D:\\pictures"
@@ -29,6 +30,7 @@ picturesAreInRootFolder = True
 nameOfPart = "volume"
 
 unite_pictures_into_pdf(outputPdfName, pathToSavePdfTo, pathToPictures, splitType, numberOfEntitiesInOnePdf, listWithImagesExtensions, picturesAreInRootFolder, nameOfPart)
+```
 
 Example 2.
 We want to do the same as in the example 1, but split pdf into pdfs that contain maximum 10 pictures each.
