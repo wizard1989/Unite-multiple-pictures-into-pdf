@@ -15,6 +15,9 @@ Function unite_pictures_into_pdf has 8 input parameters:
 Pictures are sorted in ascending order. If we have subfolders, then subforlders sorted first so that we first get sorted pictures of first subfolder and so on. Script uses function "sorted nicely" to sort names in the way human expects.
 
 # Examples of usage
+Example 1.
+We have folder "D:\\pictures" with pictures of types *.png and *.jpg.
+
 outputPdfName = "pdf_with_pictures"
 pathToSavePdfTo = "D:\\pictures"
 pathToPictures = "D:\\pictures"
