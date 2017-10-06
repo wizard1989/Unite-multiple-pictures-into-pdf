@@ -32,10 +32,11 @@ nameOfPart = "volume"
 unite_pictures_into_pdf(outputPdfName, pathToSavePdfTo, pathToPictures, splitType, numberOfEntitiesInOnePdf, listWithImagesExtensions, picturesAreInRootFolder, nameOfPart)
 ```
 
-Example 2.
-We want to do the same as in the example 1, but split pdf into pdfs that contain maximum 10 pictures each.
-Partname will be picture.
+  Example 2.  
+  We want to do the same as in the example 1, but split pdf into pdfs that contain maximum 10 pictures each.  
+  The name of part will be "picture".  
 
+```python
 outputPdfName = "pdf_with_pictures"
 pathToSavePdfTo = "D:\\pictures"
 pathToPictures = "D:\\pictures"
@@ -46,11 +47,12 @@ picturesAreInRootFolder = True
 nameOfPart = "picture"
 
 unite_pictures_into_pdf(outputPdfName, pathToSavePdfTo, pathToPictures, splitType, numberOfEntitiesInOnePdf, listWithImagesExtensions, picturesAreInRootFolder, nameOfPart)
+```
 
-Running the above code on folder with 26 pictures we get 3 pdfs with names:
-pdf_with_pictures_picture_1-10_of_26.pdf
-pdf_with_pictures_picture_11-20_of_26.pdf
-pdf_with_pictures_picture_21-26_of_26.pdf
+  Running the above code on folder with 26 pictures we get 3 pdfs with names:  
+  pdf_with_pictures_picture_1-10_of_26.pdf  
+  pdf_with_pictures_picture_11-20_of_26.pdf  
+  pdf_with_pictures_picture_21-26_of_26.pdf  
 
 
 
