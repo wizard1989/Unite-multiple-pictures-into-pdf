@@ -16,23 +16,39 @@ Pictures are sorted in ascending order. If we have subfolders, then subforlders 
 
 # Examples of usage
 Example 1.
-We have folder "D:\\pictures" with pictures of types *.png and *.jpg.
+We have folder "D:\\pictures" with pictures of types png and jpg.
+We want to create file pdf_with_pictures.pdf out of them and save it in the same folder.
+
+outputPdfName = "pdf_with_pictures"
+pathToSavePdfTo = "D:\\pictures"
+pathToPictures = "D:\\pictures"
+splitType = "none"
+numberOfEntitiesInOnePdf = 1
+listWithImagesExtensions = ["png", "jpg"]
+picturesAreInRootFolder = True
+nameOfPart = "volume"
+
+unite_pictures_into_pdf(outputPdfName, pathToSavePdfTo, pathToPictures, splitType, numberOfEntitiesInOnePdf, listWithImagesExtensions, picturesAreInRootFolder, nameOfPart)
+
+Example 2.
+We want to do the same as in the example 1, but split pdf into pdfs that contain maximum 10 pictures each.
+Partname will be picture.
 
 outputPdfName = "pdf_with_pictures"
 pathToSavePdfTo = "D:\\pictures"
 pathToPictures = "D:\\pictures"
 splitType = "picture"
-numberOfEntitiesInOnePdf = 1
+numberOfEntitiesInOnePdf = 10
 listWithImagesExtensions = ["png", "jpg"]
-picturesAreInRootFolder = False
-nameOfPart = "volume"
-    
+picturesAreInRootFolder = True
+nameOfPart = "picture"
+
 unite_pictures_into_pdf(outputPdfName, pathToSavePdfTo, pathToPictures, splitType, numberOfEntitiesInOnePdf, listWithImagesExtensions, picturesAreInRootFolder, nameOfPart)
 
-
-
-
-
+Running the above code on folder with 26 pictures we get 3 pdfs with names:
+pdf_with_pictures_picture_1-10_of_26.pdf
+pdf_with_pictures_picture_11-20_of_26.pdf
+pdf_with_pictures_picture_21-26_of_26.pdf
 
 
 
