@@ -15,9 +15,9 @@ Function unite_pictures_into_pdf has 8 input parameters:
 Pictures are sorted in ascending order. If we have subfolders, then subforlders sorted first so that we first get sorted pictures of first subfolder and so on. Script uses function "sorted nicely" to sort names in the way human expects.
 
 # Examples of usage
-Example 1.
-We have folder "D:\\pictures" with pictures of types png and jpg.
-We want to create file pdf_with_pictures.pdf out of them and save it in the same folder.
+  Example 1.  
+  We have folder "D:\\pictures" with pictures of types png and jpg.  
+  We want to create file pdf_with_pictures.pdf out of them and save it in the same folder.  
 
 ```python
 outputPdfName = "pdf_with_pictures"
@@ -54,8 +54,27 @@ unite_pictures_into_pdf(outputPdfName, pathToSavePdfTo, pathToPictures, splitTyp
   pdf_with_pictures_picture_11-20_of_26.pdf  
   pdf_with_pictures_picture_21-26_of_26.pdf  
 
+  Example 3.  
+  We have downloaded 5 manga volumes with "Universal Manga Downloader" (https://github.com/yuru-yuri/Manga-Downloader).  
+  As a result we've got folder "D:\\manga" with folders vol001, vol002 up until vol005, containing png files.  
+  We want to create multiple pdfs with 1 volume in each. So we run this code.
 
+```python
+outputPdfName = "manga_name"
+pathToSavePdfTo = "D:\\manga"
+pathToPictures = "D:\\manga"
+splitType = "folder"
+numberOfEntitiesInOnePdf = 1
+listWithImagesExtensions = ["png"]
+picturesAreInRootFolder = False
+nameOfPart = "volume"
 
+unite_pictures_into_pdf(outputPdfName, pathToSavePdfTo, pathToPictures, splitType, numberOfEntitiesInOnePdf, listWithImagesExtensions, picturesAreInRootFolder, nameOfPart)
+```
 
-
-
+  Running the above code we get 5 pdfs with names:  
+  manga_name_volume_1_of_5.pdf  
+  manga_name_volume_2_of_5.pdf  
+  manga_name_volume_3_of_5.pdf  
+  manga_name_volume_4_of_5.pdf  
+  manga_name_volume_5_of_5.pdf  
